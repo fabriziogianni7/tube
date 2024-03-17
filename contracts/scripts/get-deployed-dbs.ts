@@ -17,7 +17,6 @@ async function main() {
     const dbGodContract = new ethers.Contract(dbgodAddress, DBGODJson.abi, account_1);
 
     const response = await dbGodContract.callDbManagerOnSubnet();
-    console.log(response);
 
 
     const logs = await ethers.provider.getLogs({
