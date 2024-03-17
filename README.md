@@ -1,5 +1,5 @@
 # Tube Subnet
-Tube is an experimental project that attempts to create an on chain DB using IPC from Filecoin.
+Tube is an experimental project that attempts to create an on chain DB using [IPC](https://github.com/consensus-shipyard/ipc/tree/cd/contracts) from Filecoin.
 
 ## How Does It Work?
 We deployed a Subnet (**Tube Subnet**) from testnet calibration network on our virtual machine, you can connect to it and play with our contracts!
@@ -33,4 +33,4 @@ CHAIN ID: `3830613802618472`
 
 **TABLE ADDRESS**: `0xdEaf47941Ea4a48650159110B4559C784C4E9290`
 
-**DBGOD**: `0x95D8B3ec1F724785728e7c6D9b7645183f41094c`
+**DBGOD**: [`0x95D8B3ec1F724785728e7c6D9b7645183f41094c`](https://calibration.filfox.info/en/address/0x95D8B3ec1F724785728e7c6D9b7645183f41094c)
