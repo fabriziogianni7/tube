@@ -7,11 +7,7 @@ import * as TableJson from "../artifacts/contracts/Table.sol/Table.json";
 import { TableAttributes, Column, Row, TypeEnum } from "./structs"
 import { tableAttributes } from "./utils/tableAttributes";
 
-
-
 let account_1: Signer;
-let account_2: Signer;
-let account_3: Signer;
 let tableImplementation: Table;
 let tableImplementationAddress: string;
 let database: DB;
@@ -27,7 +23,7 @@ let tableContract: Table
 
 describe("Test Db Creation", async () => {
   beforeEach(async () => {
-    [account_1, account_2, account_3] = await ethers.getSigners();
+    [account_1] = await ethers.getSigners();
 
     // DB Implementation
     const DBFactory: DB__factory = await ethers.getContractFactory("DB", account_1)
@@ -84,6 +80,7 @@ describe("Test Db Creation", async () => {
 
 
   })
+
 
 
 });
