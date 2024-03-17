@@ -14,10 +14,22 @@ async function main() {
 
     const dbgodAddress = "0x95D8B3ec1F724785728e7c6D9b7645183f41094c";
 
-    const dbGodContract = new ethers.Contract(dbgodAddress,DBGODJson.abi, account_1);
+    const dbGodContract = new ethers.Contract(dbgodAddress, DBGODJson.abi, account_1);
 
     const response = await dbGodContract.callDbManagerOnSubnet();
     console.log(response);
+
+
+    const logs = await ethers.provider.getLogs({
+        address: dbgodAddress,
+        topics: await dbGodContract.filters.DBGodRead().getTopicFilter(),
+        fromBlock: 0,
+        toBlock: 'latest',
+    })
+
+    const message = logs.map((log: any) => dbGodContract.interface.parseLog(log)?.args[0])[0][0]
+
+    console.log("Message sent towards the tube subnet:",message)
 
 }
 
