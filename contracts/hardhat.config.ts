@@ -33,6 +33,10 @@ const config: HardhatUserConfig = {
       url: "https://api.calibration.node.glif.io/rpc/v1",
       accounts: [`${process.env.ACCOUNT_PK}`,], // just a test account, use an .env file please
     },
+    spicynet: {
+      url: "https://spicy-rpc.chiliz.com/",
+      accounts: [`${process.env.ACCOUNT2_PK}`,], // just a test account, use an .env file please
+    },
   },
 };
 
