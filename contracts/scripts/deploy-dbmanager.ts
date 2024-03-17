@@ -8,7 +8,7 @@ import { tableAttributes } from "./utils/tableAttributes";
 
 
 /**
- * command: npx hardhat run scripts/deploy.ts --network tubenet
+ * command: npx hardhat run scripts/deploy-dbmanager.ts --network tubenet
  */
 async function main() {
     const [account_1] = await ethers.getSigners();
