@@ -16,13 +16,13 @@ async function main() {
 
     const dbGodContract = new ethers.Contract(dbgodAddress, DBGODJson.abi, account_1);
 
-    const response = await dbGodContract.callDbManagerOnSubnet();
+await dbGodContract.callDbManagerOnSubnet();
 
 
     const logs = await ethers.provider.getLogs({
         address: dbgodAddress,
         topics: await dbGodContract.filters.DBGodRead().getTopicFilter(),
-        fromBlock: 0,
+        fromBlock: 1443000,
         toBlock: 'latest',
     })
 
